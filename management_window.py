@@ -146,7 +146,7 @@ class ManagementWindow:
                 self.clean_data_entries()
 
             else:
-                messagebox.showinfo("Duplicacion de registro", f"Ya existe un empleado registrado con la cedula{ci}")
+                messagebox.showinfo("Duplicacion de registro", f"Ya existe un empleado registrado con la cedula: {ci}")
 
         else:
             messagebox.showinfo("Datos incompletos","Debe rellenar todos los campos solicitados")
@@ -177,7 +177,7 @@ class ManagementWindow:
                 self.combo_status.set_value(datos[0][10])
 
             else:
-                messagebox.showinfo("Registro no encontrado", "Cedula no corresponde en el registro de empleados")
+                messagebox.showinfo("Registro no encontrado", f"El numero de cedula: {ci} no esta registrado")
 
         else:
             messagebox.showinfo("Datos incompletos","Debe rellenar el campo CI ")
@@ -199,7 +199,7 @@ class ManagementWindow:
                 self.clean_data_entries()
 
             else:
-                messagebox.showinfo("Registro no encontrado","No se encontro un registro con dicha cedula para poder actualizar")
+                messagebox.showinfo("Registro no encontrado",f"El numero de cedula: {ci} no esta registrado")
 
         else:
             messagebox.showinfo("Datos incompletos","Debe rellenar todos los campos solicitados")
@@ -224,7 +224,7 @@ class ManagementWindow:
                     messagebox.showinfo("Cancelado", "La operacion de eliminacion ha sido cancelada")
 
             else:
-                messagebox.showinfo("Registro no encontrado","No se encontro un registro con dicha cedula para poder actualizar")
+                messagebox.showinfo("Registro no encontrado",f"El numero de cedula: {ci} no esta registrado")
         else:
             messagebox.showinfo("Datos incompletos", "Debe rellenar el campo ci con la cedula del empleado a eliminar")
 

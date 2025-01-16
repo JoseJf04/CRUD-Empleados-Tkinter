@@ -7,7 +7,7 @@ from tkinter import messagebox
 def execute_query(query, params):
 
     # Creacion de la conexion a la DB
-    connection = sqlite3.connect("Database/dbempleados.db")
+    connection = sqlite3.connect("C:/DB_Empleados/dbempleados.db")
 
     # Try para manejar execepciones
     try:

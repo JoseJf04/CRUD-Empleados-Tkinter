@@ -5,7 +5,7 @@ from querys import CREATE_TAB
 
 def crear_tab_empleados():
     # Creacion de la conexion y Base de
-    connection = sqlite3.connect("Database/dbempleados.db")
+    connection = sqlite3.connect("C:/DB_Empleados/dbempleados.db")
 
     try:
         # Cracion del cursor

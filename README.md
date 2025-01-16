@@ -1,0 +1,1 @@
+Este es un proyecto en python y tkinter para la gestion de empleados, Es es un CRUD que permite registrar, consultar, actualizar y eliminar informacion de los empleados en la DB, usando la ventana de gestion

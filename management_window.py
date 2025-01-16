@@ -180,7 +180,7 @@ class ManagementWindow:
                 messagebox.showinfo("Registro no encontrado", f"El numero de cedula: {ci} no esta registrado")
 
         else:
-            messagebox.showinfo("Datos incompletos","Debe rellenar el campo CI ")
+            messagebox.showinfo("Datos incompletos","Debe rellenar el campo ci")
 
 
     # Metodo para actualizar la información de un empleado en la DB
@@ -199,7 +199,11 @@ class ManagementWindow:
                 self.clean_data_entries()
 
             else:
+<<<<<<< HEAD
                 messagebox.showinfo("Registro no encontrado",f"El numero de cedula: {ci} no esta registrado")
+=======
+                messagebox.showinfo("Registro no encontrado", f"El numero de cedula: {ci} no esta registrado")
+>>>>>>> 4d2fde5a06861f64876bd76431d6100f60d5b8a6
 
         else:
             messagebox.showinfo("Datos incompletos","Debe rellenar todos los campos solicitados")
@@ -224,7 +228,11 @@ class ManagementWindow:
                     messagebox.showinfo("Cancelado", "La operacion de eliminacion ha sido cancelada")
 
             else:
+<<<<<<< HEAD
                 messagebox.showinfo("Registro no encontrado",f"El numero de cedula: {ci} no esta registrado")
+=======
+                messagebox.showinfo("Registro no encontrado", f"El numero de cedula: {ci} no esta registrado")
+>>>>>>> 4d2fde5a06861f64876bd76431d6100f60d5b8a6
         else:
             messagebox.showinfo("Datos incompletos", "Debe rellenar el campo ci con la cedula del empleado a eliminar")
 

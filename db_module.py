@@ -31,7 +31,7 @@ def execute_query(query, params):
 
     # Imprimir excepcion en caso de existir
     except sqlite3.Error as e:
-        print(f"""Error al ejecutar la consulta: {e}""")
+        messagebox.showerror("Error",f"""Error al ejecutar la instrucción: {e}""")
 
     # Finalizar y cerrar las conexiones
     finally:

@@ -1,6 +1,7 @@
 """ Modulo para la creación de tablas de base de datos """
 
 import sqlite3
+from tkinter import messagebox
 from querys import CREATE_TAB
 
 def crear_tab_empleados():
@@ -16,7 +17,7 @@ def crear_tab_empleados():
 
     # Imprimir excepcion en caso de existir
     except sqlite3.Error as e:
-        print(f"""Error al ejecutar la query {e}""")
+        messagebox.showerror("Error",f"""Error al ejecutar la query {e}""")
 
     finally:
         cursor.close()

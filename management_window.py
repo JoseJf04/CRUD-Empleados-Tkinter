@@ -202,8 +202,6 @@ class ManagementWindow:
 
                 messagebox.showinfo("Registro no encontrado",f"El numero de cedula: {ci} no esta registrado")
 
-                messagebox.showinfo("Registro no encontrado", f"El numero de cedula: {ci} no esta registrado")
-
         else:
             messagebox.showinfo("Datos incompletos","Debe rellenar todos los campos solicitados")
 
@@ -228,8 +226,6 @@ class ManagementWindow:
 
             else:
                 messagebox.showinfo("Registro no encontrado",f"El numero de cedula: {ci} no esta registrado")
-
-                messagebox.showinfo("Registro no encontrado", f"El numero de cedula: {ci} no esta registrado")
 
         else:
             messagebox.showinfo("Datos incompletos", "Debe rellenar el campo ci con la cedula del empleado a eliminar")

@@ -13,7 +13,7 @@ class ManagementWindow:
         # Creacion de la ventana
         self.wn = root
         self.wn.title("Gestion de Personal")
-        self.wn.geometry("600x600")
+        self.wn.geometry("770x650")
 
         #   Label de descripción de la ventana de gestion
         self.label_description = tk.Label(self.wn, text="Gestion de empleados", font=("Arial","14"), fg="Green")
@@ -28,35 +28,35 @@ class ManagementWindow:
         self.frameBtn.pack(fill=tk.BOTH, expand=True)
 
         #   Label y Entry para el ingreso de la cedula del nuevo empleado
-        self.label_ci = wgt.BasicLabel(self.frame_app, r=0, col=0, txt="Cedula idt", fnt=("Arial", "12"), fclr="Green")
+        self.label_ci = wgt.BasicLabel(self.frame_app, r=0, col=0, txt="Cedula idt", fnt=("Arial", "14"), fclr="Green")
         self.text_ci = wgt.IntEntry(self.frame_app, r=0, col=1)
 
         #   Label y Entry para el ingreso de nombre del empleado
-        self.label_name = wgt.BasicLabel(self.frame_app, r=1, col=0, txt="Nombres", fnt=("Arial","12"), fclr="Blue")
+        self.label_name = wgt.BasicLabel(self.frame_app, r=1, col=0, txt="Nombres", fnt=("Arial","14"), fclr="Blue")
         self.text_name = wgt.BasicEntry(self.frame_app, r=1, col=1)
 
         #   Label y Entry para apellido del empleado
-        self.label_lastname = wgt.BasicLabel(self.frame_app, r=2, col=0, txt="Apellidos", fnt=("Arial","12"), fclr="Orange")
+        self.label_lastname = wgt.BasicLabel(self.frame_app, r=2, col=0, txt="Apellidos", fnt=("Arial","14"), fclr="Orange")
         self.text_lastname = wgt.BasicEntry(self.frame_app, r=2, col=1)
 
         #   Combo de seleccion de sexo
         self.combo_gender = wgt.ImmComboBox(self.frame_app, r=3, col=1, vals=["Seleccionar sexo", "Masculino","Femenino"])
 
         #   Label y Entey para la edad del empleado
-        self.label_age = wgt.BasicLabel(self.frame_app, r=4, col=0, txt="Edad", fnt=("Arial","12"), fclr="Purple")
+        self.label_age = wgt.BasicLabel(self.frame_app, r=4, col=0, txt="Edad", fnt=("Arial","14"), fclr="Purple")
         self.text_age = wgt.IntEntry(self.frame_app, r=4, col=1)
 
         #   Label y Entry para el ingreso de email
-        self.label_email = wgt.BasicLabel(self.frame_app, r=5, col=0, txt="Correo", fnt=("Arial","12"), fclr="Indigo")
+        self.label_email = wgt.BasicLabel(self.frame_app, r=5, col=0, txt="Correo", fnt=("Arial","14"), fclr="Indigo")
         self.text_email = wgt.BasicEntry(self.frame_app, r=5, col=1, wdth=50)
         self.text_email.establish_columnspan(6)
-        self.text_email.establish_padd(x=20)
+        self.text_email.establish_padd(x=25)
 
         #   Label y Entry para el ingreso de Direccion de domicilio
-        self.label_direction = wgt.BasicLabel(self.frame_app, r=6, col=0, txt="Direccion", fnt=("Arial", "12"), fclr="Red")
+        self.label_direction = wgt.BasicLabel(self.frame_app, r=6, col=0, txt="Direccion", fnt=("Arial", "14"), fclr="Red")
         self.text_direction = wgt.BasicEntry(self.frame_app, r=6, col=1, wdth=65)
         self.text_direction.establish_columnspan(10)
-        self.text_direction.establish_padd(x=20)
+        self.text_direction.establish_padd(x=25)
 
         #   Combo para la seleccion de puesto de trabajo
         self.combo_workstation = wgt.ImmComboBox(self.frame_app, r=7, col=1, vals=["Cargo en la empresa", "Director","Coordinador","Analista"])
@@ -65,7 +65,7 @@ class ManagementWindow:
         self.combo_marital_status = wgt.ImmComboBox(self.frame_app, r=8, col=1, vals=["Estado civil", "Soltero(@)", "Casado(@)"])
 
         #   Label y Entry para el ingreso de salario del empleado
-        self.label_salary = wgt.BasicLabel(self.frame_app, r=9, col=0, txt="Sueldo B", fnt=("Arial", "12"), fclr="Teal")
+        self.label_salary = wgt.BasicLabel(self.frame_app, r=9, col=0, txt="Sueldo B", fnt=("Arial", "14"), fclr="Teal")
         self.text_salary = wgt.NumericEntry(self.frame_app, r=9, col=1)
 
         #   Combo para la seleccion del estatus operativo

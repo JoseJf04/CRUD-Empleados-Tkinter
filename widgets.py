@@ -1,4 +1,4 @@
-""" Modulo para la definición de clases de elementos """
+""" Módulo para la definición de clases de elementos """
 
 import tkinter as tk
 from tkinter import ttk
@@ -6,7 +6,7 @@ import re
 
 # BasicLabel : Default Label
 class BasicLabel(tk.Label):
-    def __init__(self, master, r=0, col=0, txt="Label", fnt=("Arial","10"), fclr="Black"):
+    def __init__(self, master, r=0, col=0, txt="Label", fnt=("Arial","12"), fclr="Black"):
         super().__init__(master, text=txt, font=fnt, fg=fclr )
 
         # Establecer filas y columnas de la etiqueta,  y el padding por defecto
@@ -27,8 +27,8 @@ class BasicLabel(tk.Label):
 
 # BasicEntry : Default entry
 class BasicEntry(tk.Entry):
-    def __init__(self, master, r=0, col=0, wdth=25, **kwargs):
-        super().__init__(master, width=wdth, **kwargs)
+    def __init__(self, master, r=0, col=0, wdth=25, fnt=("Arial","12"), **kwargs):
+        super().__init__(master, width=wdth, font=fnt, **kwargs)
 
         # Establecer filas y columnas del entry,  y el padding por defecto
         self.grid(row=r, column=col, padx=5, pady=10)
@@ -65,8 +65,8 @@ class BasicEntry(tk.Entry):
 
 # NumericEntry : Entry for numbers
 class NumericEntry(BasicEntry):
-    def __init__(self, master, r=0, col=0, wdth=25, **kwargs):
-        super().__init__(master, r=r, col=col, wdth=wdth, **kwargs)
+    def __init__(self, master, r=0, col=0, wdth=25, fnt=("Arial","12"), **kwargs):
+        super().__init__(master, r=r, col=col, wdth=wdth, fnt=fnt,**kwargs)
 
             # Registro de la validacion
         self.validate_command = master.register(self.validate)
@@ -86,8 +86,8 @@ class NumericEntry(BasicEntry):
 
 # IntEntry : Entry for integer
 class IntEntry(NumericEntry):
-    def __init__(self, master, r=0, col=0, wdth=25, **kwargs):
-        super().__init__(master, r=r, col=col, wdth=wdth, **kwargs)
+    def __init__(self, master, r=0, col=0, wdth=25, fnt=("Arial","12"), **kwargs):
+        super().__init__(master, r=r, col=col, wdth=wdth, fnt=fnt,**kwargs)
 
             # Registro de la validacion
         self.validate_command = master.register(self.validate)
@@ -105,13 +105,13 @@ class IntEntry(NumericEntry):
 
     # BasicComboBox : Basic Combobox
 class BasicComboBox(ttk.Combobox):
-    def __init__(self, master, r=0, col=0, vals=[""], wdth=22, **kwargs):
-        super().__init__(master, values=vals, width=wdth, **kwargs)
+    def __init__(self, master, r=0, col=0, vals=[""], wdth=23, fnt=("Arial","12"), **kwargs):
+        super().__init__(master, values=vals, width=wdth, font=fnt, **kwargs)
 
         #Obtener los valores pasados al combobox
         self.valores = vals
 
-        # Setear el valor del indice 0 como opción por defecto del combobox
+        # Setear el valor del índice 0 como opción por defecto del combobox
         self.set(self.valores[0])
 
         # Establecer fila y columna del combobox,  y el paddding por defecto
@@ -140,8 +140,8 @@ class BasicComboBox(ttk.Combobox):
 
     # ImmComboBox : Immutable Combobox
 class ImmComboBox(BasicComboBox):
-    def __init__(self, master, r=0, col=0, vals=[""], wdth=22, **kwargs):
-        super().__init__(master, r=r, col=col, vals=vals, wdth=wdth, **kwargs)
+    def __init__(self, master, r=0, col=0, vals=[""], wdth=23, fnt=("Arial","12"), **kwargs):
+        super().__init__(master, r=r, col=col, vals=vals, wdth=wdth, fnt=fnt,**kwargs)
 
             # Establercer los textos del combo como no editables
         self['state'] = "readonly"
@@ -149,8 +149,10 @@ class ImmComboBox(BasicComboBox):
 
     # BasicBtn : Basic Button
 class BasicBtn(tk.Button):
-    def __init__(self, master, r=0, col=0, wdth=10, hght=2, comm=None, txt="button", clr="White", fclr="Black", **kwargs):
-        super().__init__(master, width=wdth, height=hght, command=comm, text=txt, bg=clr, fg=fclr, **kwargs)
+    def __init__(self, master, r=0, col=0, wdth=10, hght=2, comm=None, txt="button", clr="White", fclr="Black",
+                 fnt=("Arial","12"), **kwargs):
+
+        super().__init__(master, width=wdth, height=hght, command=comm, text=txt, bg=clr, fg=fclr, font=fnt, **kwargs)
 
         # Establecer la fila y columna del boton,  y el padding por defecto
         self.grid(row=r, column=col, padx=5, pady=10)
